@@ -1,0 +1,275 @@
+/* ================= NAVBAR DINAMIS ================= */
+
+.navbar-custom {
+    background-color: transparent;
+    transition: all 0.4s ease-in-out;
+    padding: 15px 0;
+}
+
+.navbar-brand .brand-accent {
+    color: #48cae4 !important;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff !important; 
+    font-weight: 500;
+}
+
+/* 2. Kondisi Saat Di-scroll (Solid/Putih) */
+.navbar-scrolled {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 10px 0; 
+}
+
+/* Mengembalikan warna teks menjadi gelap agar terbaca di atas navbar putih */
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link {
+    color: #333333 !important; 
+}
+
+/* Efek Hover: Berubah warna saat disentuh kursor mouse */
+.navbar-custom .nav-link:hover,
+.navbar-scrolled .nav-link:hover {
+    color: #48cae4 !important; 
+    transition: color 0.2s ease-in-out;
+}
+
+/* Efek Active: Warna menu saat layar sedang berada di section tersebut */
+.navbar-custom .nav-link.active-menu,
+.navbar-scrolled .nav-link.active-menu {
+    color: #48cae4 !important;
+    font-weight: 700; 
+    border-bottom: 2px solid #48cae4; 
+}
+
+/* ================= HERO SECTION BACKGROUND ================= */
+.hero-bg {
+    /* Perhatikan baris di bawah ini! */
+    background-image: url('../assets/background/BG_landing.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+/* Lapisan Gelap (Overlay) di atas gambar */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* ================= SECTION BAHAN (Visual Upgrade) ================= */
+.bg-light-blue {
+    background-color: #f0f7fc;
+}
+
+/* Dekorasi air latar belakang */
+.water-bg-decor {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(173,216,230,0.4) 0%, rgba(240,247,252,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Kartu Kandungan Utama */
+.card-ingredient {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px !important;
+}
+
+.card-ingredient:hover {
+    transform: translateY(-5px); /* Efek melayang saat kursor di atasnya */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 50%;
+}
+
+/* Custom Accordion Styling */
+.custom-accordion .accordion-item {
+    border: none !important;
+}
+
+.custom-accordion .accordion-button {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 12px !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Tombol Accordion saat aktif (terbuka) */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #ffffff !important;
+    color: #0d6efd !important;
+    font-weight: bold;
+}
+
+/* Transisi konten accordion */
+.custom-accordion .accordion-body {
+    border-top: none;
+    line-height: 1.6;
+}
+
+/* Modifikasi Foto Utama Bulat Estetik */
+.rounded-circle-custom {
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* ================= SECTION MANFAAT ================= */
+.bg-light-blue {
+    background-color: #f0f7fc; 
+}
+
+.rounded-5 {
+    border-radius: 24px !important;
+}
+
+@media (min-width: 76px) {
+    .border-end-md {
+        border-right: 1px solid #f1f5f9;
+    }
+}
+.benefit-point {
+    transition: transform 0.2s ease;
+}
+.benefit-point:hover {
+    transform: translateX(5px); 
+}
+
+/* ================= SECTION PERMASALAHAN KULIT ================= */
+
+#carouselPermasalahan .carousel-control-prev,
+#carouselPermasalahan .carousel-control-next {
+    width: 45px !important;
+    height: 45px !important;
+    background-color: #f0f7fc;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat tombol panah disorot mouse */
+#carouselPermasalahan .carousel-control-prev:hover,
+#carouselPermasalahan .carousel-control-next:hover {
+    opacity: 1;
+    background-color: #f8f9fa;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* 2. Modifikasi Indikator (Titik-titik di bawah) */
+#carouselPermasalahan .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #6c757d;
+    margin: 0 5px;
+}
+
+#carouselPermasalahan .carousel-indicators .active {
+    background-color: #212529;
+    transform: scale(1.2);
+}
+
+/* 3. Penyesuaian Responsivitas untuk Layar HP */
+@media (max-width: 767.98px) {
+    #carouselPermasalahan .rounded-start-4 {
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: 1rem !important; 
+    }
+    
+    /* Tombol panah agak digeser ke dalam jika di layar HP agar tidak terpotong */
+    #carouselPermasalahan .carousel-control-prev {
+        margin-left: -10px !important;
+    }
+    #carouselPermasalahan .carousel-control-next {
+        margin-right: -10px !important;
+    }
+}
+
+/* ================= SECTION HASIL PENGGUNAAN ================= */
+
+.stat-number {
+    color: #f39c12;
+}
+
+.stat-text {
+    color: #36b9cc; 
+}
+
+/* ================= SECTION TESTIMONI ================= */
+
+.testimonial-bg {
+    background-image: url('../assets/background/BG_testimoni.jpg'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.testimonial-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+
+/* 2. Pengaturan Foto Kartu (Sesuai Referensi Gambar Anda) */
+.testimoni-img {
+    height: 250px; 
+    object-fit: cover;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.testimoni-name {
+    color: #48cae4; 
+}
+
+/* ================= FOOTER PREMIUM ================= */
+footer.bg-dark {
+    background-color: #1a1e23 !important;
+}
+
+/* Efek saat teks tautan dan ikon disorot kursor */
+.footer-link:hover, .footer-icon:hover {
+    color: #48cae4 !important; 
+    transition: color 0.3s ease;
+}
+
+/* Modifikasi kotak input Newsletter */
+#emailInput::placeholder {
+    color: #6c757d;
+}
+
+#emailInput:focus {
+    box-shadow: none;
+    border-color: #48cae4 !important;
+}
